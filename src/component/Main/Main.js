@@ -13,17 +13,18 @@ export default function Main(props) {
     });
     
 
-
     const handleTypeChange = (e) => {
         setType(e.target.value);
         setCategory('');
-      };
+    };
       const handleCategoryChange = (e) => {
         setCategory(e.target.value);
     };
     const handleAmountChange = (e) => {
         setAmount(e.target.value);
     };
+
+
     const handleSubmit = () => {
         if (type && category && amount) {
             const newSubmission = { type, category, amount: parseFloat(amount), date };
@@ -34,8 +35,9 @@ export default function Main(props) {
             setCategory('');
             setAmount('');
             setDate('');
+            props.showAlert('Added Succsessfully', 'success');
         } else {
-            alert('Please fill out all fields');
+            props.showAlert('Please fill out all fields', 'danger');
         }
     };
     const handleDelete = (index) => {
