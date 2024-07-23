@@ -1,0 +1,45 @@
+.card-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.card-icon.income {
+    background-color: green;
+}
+
+.card-icon.expense {
+    background-color: red;
+}
+
+.card-content {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.card-delete-btn {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+}
+
+.card-delete-btn:hover {
+    color: red;
+}
