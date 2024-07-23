@@ -5,6 +5,7 @@
 The Expense Tracker App is a simple and intuitive application designed to help users keep track of their expenses. Built with React, this app allows users to manage their expenditures efficiently. and show how much are they spending and earning.
 
 ---
+## Demo
 ![Spendee Header](https://github.com/AnkitSheokeen/expensetracker/blob/main/Demo/Demo.png)
 ---
 ## Features
