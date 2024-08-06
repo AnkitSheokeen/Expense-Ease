@@ -1,14 +1,27 @@
 /* App.css */
-.app {
+/* .app {
   display: flex;
   justify-content: left;
   align-items: center;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, transparent, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 75%,rgba(255,153,153,1) 100%), url('../src/component/assets/illustration.jpg'); /* Path to your image */
-  background-repeat: repeat; /* Make the background image repeat */
+  background-image: linear-gradient(to bottom, transparent, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 90%,rgba(25, 0, 255, 0.536) 100%), url('../src/component/assets/illustration.jpg');
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  background-size: 100% 100%;
+} */
+
+.app {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, transparent, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 90%,rgba(25, 0, 255, 0.536) 100%), url('../src/component/assets/illustration.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
+
 
 .floating-container {
   background: white;
@@ -21,26 +34,23 @@
   position: relative;
   box-shadow: 4px 4px rgb(5, 202, 233);
 }
-.income-container{
+.income-container,
+.expenses-container {
   background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px;
   border-radius: 8px;
   width: 30%;
   max-width: 600px;
   padding: 20px;
   margin: 20px;
   position: relative;
+}
+
+.income-container {
   box-shadow: 4px 4px lightgreen;
 }
-.expenses-container{
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: 30%;
-  max-width: 600px;
-  padding: 20px;
-  margin: 20px;
-  position: relative;
+
+.expenses-container {
   box-shadow: 4px 4px red;
 }
 
@@ -63,4 +73,24 @@
 
 input[type="number"], input[type="date"], select {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  
+  .floating-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .income-container,
+  .expenses-container {
+    text-align: center;
+    width: 100%; /* Full width for mobile screens */
+    margin: 10px 0; /* Adjust margin for spacing */
+    display: block; /* Ensure display */
+  }
 }
