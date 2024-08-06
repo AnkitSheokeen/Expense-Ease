@@ -31,11 +31,12 @@ function App() {
   return (
     <>
     <div className='app'>
-      <div className='floating-container'>
-        <Main setBalance={setBalance} setIncome={setIncome} setExpenses={setExpenses} balance={balance} showAlert={showAlert}/>
-      </div>
+      
       <div className='income-container'>
         <PieChart data={income} amount={totalIncome} title="Income" />
+      </div>
+      <div className='floating-container'>
+        <Main setBalance={setBalance} setIncome={setIncome} setExpenses={setExpenses} balance={balance} showAlert={showAlert}/>
       </div>
         <div className='expenses-container'>
       <PieChart data={expenses} amount={totalExpenses} title="Expense" />

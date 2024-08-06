@@ -1,19 +1,8 @@
 /* App.css */
-/* .app {
+.app {
   display: flex;
   justify-content: left;
   align-items: center;
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom, transparent, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 90%,rgba(25, 0, 255, 0.536) 100%), url('../src/component/assets/illustration.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-} */
-
-.app {
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
   min-height: 100vh;
   background-image: linear-gradient(to bottom, transparent, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 90%,rgba(25, 0, 255, 0.536) 100%), url('../src/component/assets/illustration.jpg');
   background-repeat: no-repeat;
@@ -76,7 +65,10 @@ input[type="number"], input[type="date"], select {
 }
 
 @media (max-width: 768px) {
-
+  .app{
+    display: flex;
+    flex-direction: column; 
+  }
   
   .floating-container {
     width: 100%;
